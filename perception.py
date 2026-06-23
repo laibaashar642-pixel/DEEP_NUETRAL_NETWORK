@@ -26,6 +26,7 @@ result=np.dot(input1,weight1)  + np.dot(input2,weight2)
 #Inputs lety hai
 bias=9.0
 #Actual_label kia hota hai ye wo actual jawab hota hai jo hamay pehly sai hi pta ho yani actual score kia aye gha calculation  honey kai baad
+weights=np.array([23,9,7.0,8])
 actual_label=0.1
 #Adding Bias
 result1=result+bias
