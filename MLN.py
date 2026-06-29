@@ -1,4 +1,4 @@
-#Multi Nuetral Network ye hamay tb use krna hota hai jb perception nai krna usmy sirf aik hi nueron hota hai jo sirf aik decision kai liye use hota hai so mln  isliya use hota hai kunkay jb humay multiple decisions krny hoty hai aur multiple nuerons ki zarurat hoti hai tu is mai forward propagation,backward propagation a jati hai 
+""" #Multi Nuetral Network ye hamay tb use krna hota hai jb perception nai krna usmy sirf aik hi nueron hota hai jo sirf aik decision kai liye use hota hai so mln  isliya use hota hai kunkay jb humay multiple decisions krny hoty hai aur multiple nuerons ki zarurat hoti hai tu is mai forward propagation,backward propagation a jati hai 
 #So, Forward Propagation means data ko agy bhejna 
 #First is defining data First layer jiskay andr do hidden layers (2nuerons) hoty hai
 import numpy as np
@@ -23,9 +23,20 @@ print(f"z_out:{z_out:4f}")
 print(f"Final Output:{output:4f}")
 print(f"Decision:{'Pass'if output >= 0.5 else 'Fail'}")
 error=actual_label-output
-print(f"Error:{error:.4f}")
+print(f"Error:{error:.4f}") """
 """ Rule yaad rakho
 Hidden neurons = 2  →  W2 mein 2 elements
 Hidden neurons = 5  →  W2 mein 5 elements
 Hidden neurons = 10 →  W2 mein 10 elements
 W2 ka size hamesha = hidden neurons ki count. """
+import numpy as np
+X=np.array([12,43,78,20])
+actual_label=1
+weights=np.array([1,2.0,3.4,5.0],
+                 [-1.0,3.2,4.4,9.0])
+bias1=1.09
+weights2=np.array([2,3])
+bias2=9.0
+#Then define the hidden layer
+z_hidden=np.dot(weights,X)+bias1
+#Then apply the relu

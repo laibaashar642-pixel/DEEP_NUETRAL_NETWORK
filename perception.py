@@ -1,4 +1,4 @@
-#Perceptron means kai jb hum pehli baar koi prediction krty hai apny nuerons ki help sai tu baaz dfa wo glt hoti hai lekin next time jb hum us cheez ko dekhty hai tu shi predict krty hai so usi ko perception kehty hai kai pehly wali gltyion sai seekhna.teen cheezain jo perception ko imp bnati hai one is step activation yani output 1 ya 0 kai inbetween hona chaye weights update hoty hai agr error 0 aye tu sb kuchshi hai aur agr error +1 aye tu weights badhao aur agr -1 ho tu glt weights ghatao aur inputs multiply hojaty hai
+""" #Perceptron means kai jb hum pehli baar koi prediction krty hai apny nuerons ki help sai tu baaz dfa wo glt hoti hai lekin next time jb hum us cheez ko dekhty hai tu shi predict krty hai so usi ko perception kehty hai kai pehly wali gltyion sai seekhna.teen cheezain jo perception ko imp bnati hai one is step activation yani output 1 ya 0 kai inbetween hona chaye weights update hoty hai agr error 0 aye tu sb kuchshi hai aur agr error +1 aye tu weights badhao aur agr -1 ho tu glt weights ghatao aur inputs multiply hojaty hai
 import numpy as np
 input1=np.array([45,78,90])
 input2=np.array([23,45,33])
@@ -36,4 +36,28 @@ error=actual_label-output
 #Updation of weights
 learning_rate=0.1
 improved_weight=weight1+(error*input1*learning_rate)+weight2+(error*input2*learning_rate)
-improved_bias=bias+(error*learning_rate)
+improved_bias=bias+(error*learning_rate) """
+#Perception learning with your mistakes or errors then improve it 
+
+import numpy as np
+#Inputs lety hai but multiple inputs
+input1=np.array([89,12,34,56])
+input2=np.array([12,34,90,11])
+weights1=np.array([1.2,3.6,9.0,4.4])
+weights2=np.array([9.9,7.6,5.4,3.2])
+result=np.dot(input1,weights1)+np.dot(input2,weights2)
+bias=9.0
+score=bias+result
+#Applying Activation Function
+output=1 if result>0 else 0
+print(f"Score:{score}")
+print(f"Result:{result}")
+#Then applying perception
+weights3=np.array([9.0,8.7,2.3,1.0])
+#Actual Answer
+actual_label=1.0
+output=1 if result>0 else 0
+error=actual_label-output
+learning_rate=8.9
+improved_weight=weights1+(error*input1*learning_rate)+weights2+(error*input2*learning_rate)
+improved_bias=bias+error*learning_rate
