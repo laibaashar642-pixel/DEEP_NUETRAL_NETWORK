@@ -13,3 +13,18 @@ print("Input:",x)
 print("Relu:",relu_output)
 print("Sigmoid:",sigmoid_output)
 print("Tanh:",tanh_output)
+""" Konsa activation function kab use karna hai — simple rule
+Hidden Layers ke liye — almost hamesha ek hi jawab
+ReLU use karo. 99% cases mein yehi default choice hota hai hidden layers ke liye, kyunke yeh fast hai aur deep networks mein achi tarah kaam karta hai. Aap ko zyada sochne ki zarurat nahi — bas ReLU daal do.
+(Tanh kabhi kabhi use hota hai, lekin abhi ke liye bas itna yaad rakhein: hidden layer = ReLU)
+Output Layer ke liye — yeh depend karta hai aap ke sawal ke type par
+Yahan asal decision hai. Apne aap se yeh sawal pucho: "Mera network kis tarah ka jawab de raha hai?"
+Aap ka network kya predict kar raha hai?Use karoSirf 2 options mein se ek (Yes/No, Spam/Not Spam, Pass/Fail)Sigmoid3 ya zyada categories mein se ek (Cat/Dog/Bird)SoftmaxKoi bhi number (price, temperature, age)Koi activation nahi (Linear)
+Yaad rakhne ka simple tareeqa
+Apne aap se poochein: "Mera output kya shakal ka hai?"
+
+Agar jawab 0 ya 1 (ek decision) → Sigmoid
+Agar jawab kai categories mein se ek → Softmax
+Agar jawab ek number (jaise price) → Activation hi nahi chahiye
+
+Misal: aap ne jo XOR kiya, woh 0 ya 1 tha (do options), isi liye Sigmoid sahi tha. Agar kal hum "yeh tasveer billi hai, kutta hai, ya ghoda hai" wala kaam karein (3 options), to wahan Sigmoid kaam nahi karega — Softmax chahiye hoga. """
